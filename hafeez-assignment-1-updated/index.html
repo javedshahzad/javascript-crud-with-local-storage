@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Car Site</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/css.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./index.html">Car Hiring Site</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./booking.html">Bookings</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="text-success font-weight-bolder">Welcome</h1>
+      <h2 class="text-center text-primary">Car Hiring Site</h2>
+      <h3 class="text-secondary">About Us</h3>
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="text-info">Company Name: <span class="display-6 text-primary">Car Hiring Company</span>
+          </h3>
+          <h3 class="text-info">Company Contact: <span class="display-6 text-primary">+97123456789</span>
+          </h3>
+          <h3 class="text-info">Company Address: <span class="display-6 text-primary">Stree 1, Block B,City Canberra, Australia </span>
+          </h3>
+          <h3 class="text-info">Country: <span class="display-6 text-primary">Australia</span>
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="text-secondary text-center">Avaiable Cars</h2>
+        </div>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Book</th>
+          </tr>
+        </thead>
+        <tbody id="tabeBody">
+          <tr>
+            <td>
+              <img id="imgCar1" src='./assets/images/img1.png' alt="" class='carImg'>
+            </td>
+            <td style='vertical-align: inherit' id="namecar1"></td>
+            <td style='vertical-align: inherit' id="modalcar1"></td>
+            <td style='vertical-align: inherit' id="colorcar1"></td>
+            <td style='vertical-align: inherit' id="pricecar1"></td>
+            <td style='vertical-align: inherit' id="desccar1"></td>
+            <td style='vertical-align: inherit' id="categorycar1"></td>
+            <td style='vertical-align: inherit'>
+              <button class='btn btn-success' onclick="onBookCar(0)">Book Car</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img id="imgCar2" src='./assets/images/img1.png' alt="" class='carImg'>
+            </td>
+            <td style='vertical-align: inherit' id="namecar2"></td>
+            <td style='vertical-align: inherit' id="modalcar2"></td>
+            <td style='vertical-align: inherit' id="colorcar2"></td>
+            <td style='vertical-align: inherit' id="pricecar2"></td>
+            <td style='vertical-align: inherit' id="desccar2"></td>
+            <td style='vertical-align: inherit' id="categorycar2"></td>
+            <td style='vertical-align: inherit'>
+              <button class='btn btn-success' onclick="onBookCar(1)">Book Car</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img id="imgCar3" src='./assets/images/img1.png' alt="" class='carImg'>
+            </td>
+            <td style='vertical-align: inherit' id="namecar3"></td>
+            <td style='vertical-align: inherit' id="modalcar3"></td>
+            <td style='vertical-align: inherit' id="colorcar3"></td>
+            <td style='vertical-align: inherit' id="pricecar3"></td>
+            <td style='vertical-align: inherit' id="desccar3"></td>
+            <td style='vertical-align: inherit' id="categorycar3"></td>
+            <td style='vertical-align: inherit'>
+              <button class='btn btn-success' onclick="onBookCar(2)">Book Car</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img id="imgCar4" src='./assets/images/img1.png' alt="" class='carImg'>
+            </td>
+            <td style='vertical-align: inherit' id="namecar4"></td>
+            <td style='vertical-align: inherit' id="modalcar4"></td>
+            <td style='vertical-align: inherit' id="colorcar4"></td>
+            <td style='vertical-align: inherit' id="pricecar4"></td>
+            <td style='vertical-align: inherit' id="desccar4"></td>
+            <td style='vertical-align: inherit' id="categorycar4"></td>
+            <td style='vertical-align: inherit'>
+              <button class='btn btn-success' onclick="onBookCar(3)">Book Car</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img id="imgCar5" src='./assets/images/img1.png' alt="" class='carImg'>
+            </td>
+            <td style='vertical-align: inherit' id="namecar5"></td>
+            <td style='vertical-align: inherit' id="modalcar5"></td>
+            <td style='vertical-align: inherit' id="colorcar5"></td>
+            <td style='vertical-align: inherit' id="pricecar5"></td>
+            <td style='vertical-align: inherit' id="desccar5"></td>
+            <td style='vertical-align: inherit' id="categorycar5"></td>
+            <td style='vertical-align: inherit'>
+              <button class='btn btn-success' onclick="onBookCar(4)">Book Car</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img id="imgCar6" src='./assets/images/img6.png' alt="" class='carImg'>
+            </td>
+            <td style='vertical-align: inherit' id="namecar6"></td>
+            <td style='vertical-align: inherit' id="modalcar6"></td>
+            <td style='vertical-align: inherit' id="colorcar6"></td>
+            <td style='vertical-align: inherit' id="pricecar6"></td>
+            <td style='vertical-align: inherit' id="desccar6"></td>
+            <td style='vertical-align: inherit' id="categorycar6"></td>
+            <td style='vertical-align: inherit'>
+              <button class='btn btn-success' onclick="onBookCar(5)">Book Car</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img id="imgCar7" src='./assets/images/img7.png' alt="" class='carImg'>
+            </td>
+            <td style='vertical-align: inherit' id="namecar7"></td>
+            <td style='vertical-align: inherit' id="modalcar7"></td>
+            <td style='vertical-align: inherit' id="colorcar7"></td>
+            <td style='vertical-align: inherit' id="pricecar7"></td>
+            <td style='vertical-align: inherit' id="desccar7"></td>
+            <td style='vertical-align: inherit' id="categorycar7"></td>
+            <td style='vertical-align: inherit'>
+              <button class='btn btn-success' onclick="onBookCar(6)">Book Car</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img id="imgCar8" src='./assets/images/img8.png' alt="" class='carImg'>
+            </td>
+            <td style='vertical-align: inherit' id="namecar8"></td>
+            <td style='vertical-align: inherit' id="modalcar8"></td>
+            <td style='vertical-align: inherit' id="colorcar8"></td>
+            <td style='vertical-align: inherit' id="pricecar8"></td>
+            <td style='vertical-align: inherit' id="desccar8"></td>
+            <td style='vertical-align: inherit' id="categorycar8"></td>
+            <td style='vertical-align: inherit'>
+              <button class='btn btn-success' onclick="onBookCar(7)">Book Car</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img id="imgCar9" src='./assets/images/img9.png' alt="" class='carImg'>
+            </td>
+            <td style='vertical-align: inherit' id="namecar9"></td>
+            <td style='vertical-align: inherit' id="modalcar9"></td>
+            <td style='vertical-align: inherit' id="colorcar9"></td>
+            <td style='vertical-align: inherit' id="pricecar9"></td>
+            <td style='vertical-align: inherit' id="desccar9"></td>
+            <td style='vertical-align: inherit' id="categorycar9"></td>
+            <td style='vertical-align: inherit'>
+              <button class='btn btn-success' onclick="onBookCar(8)">Book Car</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img id="imgCar10" src='./assets/images/img10.png' alt="" class='carImg'>
+            </td>
+            <td style='vertical-align: inherit' id="namecar10"></td>
+            <td style='vertical-align: inherit' id="modalcar10"></td>
+            <td style='vertical-align: inherit' id="colorcar10"></td>
+            <td style='vertical-align: inherit' id="pricecar10"></td>
+            <td style='vertical-align: inherit' id="desccar10"></td>
+            <td style='vertical-align: inherit' id="categorycar10"></td>
+            <td style='vertical-align: inherit'>
+              <button class='btn btn-success' onclick="onBookCar(9)">Book Car</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="row">
+            <div class="col-lg-12">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-google"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-whatsapp"></a>
+            </div>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);"> © 2020 Copyright: <a class="text-dark" href="#">CarHiringSite.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <script src="./assets/js/javascript.js"></script>
+  </body>
+</html>

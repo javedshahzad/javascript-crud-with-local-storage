@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car Site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="./assets/js/javascript.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="./index.html">Car Hiring Site</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="./index.html">Home</a></li>
+        <li><a href="./booking.html">Bookings</a></li>
+        <li class="active"><a href="./contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+    <div class="container" id="submitted">
+        <h1 class="text-center text-success" id="success"></h1>
+    </div>
+<div class="container" id="formData">
+  <h2 class="text-center">Contact Us</h2>
+  <div class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Name:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+        </div>
+      </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" onchange="changeValue(this.value)" placeholder="Enter email" name="email">
+      </div>
+      <p id="InvalidvalidEmail" class="text-danger text-center font-weight-bold"></p>
+      <p id="validEmail" class="text-success text-center font-weight-bold"></p>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Phone">Phone:</label>
+      <div class="col-sm-10">          
+        <input type="number" onblur="blurFunction()" onfocus="onfocusFunction()" class="form-control" id="phone" placeholder="Enter Phone" name="phone">
+        <p class="text-danger" id="numberonly">Only Number allowed</p>
+    </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Message:</label>
+        <div class="col-sm-10">
+          <textarea type="text" class="form-control" id="message" placeholder="Enter Message" name="message"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-12">
+         <p class="text-light text-center">Please verify yourself if you are not a robot by giving answer below maths problem.</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-2 col-md-2 col-lg-2 font-weight-bold text-secondary text-center" for="email">
+          <span id="num1"></span> +
+          <span id="num2"></span>&nbsp; = &nbsp;
+        </div>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="answer" placeholder="Enter Answer" name="answer">
+        </div>
+      </div>
+      <h2 class="form-group text-danger font-weight-bold text-center" id="ErrorMsg">
+      </h2>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button class="btn btn-success" onclick="onSubmitFrom()">Submit</button>
+      </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

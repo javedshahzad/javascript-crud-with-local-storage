@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car Site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./assets/css/css.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="./index.html">Car Booking System</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="./index.html">Home</a></li>
+        <li class="active"><a href="./booking.html">Bookings</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+<div class="container">
+<h1 class="text-success font-weight-bolder">Welcome to our,</h1>
+<h2 class="text-center text-primary">My Bookings</h2>
+<div class="row">
+  <div class="col-sm-6 col-lg-6 col-md-6 text-center">
+   <button class="btn btn-info m-10" onclick="clearStorage()">Clear Bookings</button>
+  </div>
+  <div class="col-sm-6 col-lg-6 col-md-6 text-center">
+    <button class="btn btn-success" onclick="confirmBookings()">Submit order</button>
+   </div>
+</div> 
+<div class="row">
+  <div class="col-lg-12">
+    <h2 class="text-secondary text-center">Your Booked Cars</h2>
+  </div>
+</div> 
+<p id="nothing" class="text-center text-danger">You don't have any booked car yet!</p>     
+<div id="BookedCars">
+
+</div>  
+</div>
+<script src="./assets/js/js.js"></script>
+</body>
+</html>
